@@ -1,0 +1,29 @@
+﻿<Window x:Class="ManageMovies.AddMovie2ActressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageMovies"
+        mc:Ignorable="d"
+        Title="Add Movie to Actress" Height="300" Width="420" ResizeMode="NoResize" Background="WhiteSmoke" Initialized="Window_Initialized">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Actress:" Margin="7" Grid.Row="0" Grid.Column="1">
+            <ListBox Margin="3" Name="lbActresses" Grid.Row="1" Grid.Column="1"/>
+        </GroupBox>
+        <GroupBox Header="Movies:" Margin="7" Grid.Row="0" Grid.Column="0">
+            <ListBox Margin="3" Name="lbMovies" Grid.Row="0" Grid.Column="0"/>
+        </GroupBox>
+
+        <Button Margin="5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Width="80" Content="Add"
+                Click="Add_Click"/>
+    </Grid>
+</Window>

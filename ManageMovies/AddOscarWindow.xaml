@@ -1,0 +1,60 @@
+﻿<Window x:Class="ManageMovies.AddOscarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageMovies"
+        mc:Ignorable="d"
+        Title="Add Oscar" Height="322" Width="420" ResizeMode="NoResize" Background="WhiteSmoke">
+    <GroupBox Header="Add Details"  Grid.Row="0" Grid.Column="0">
+        <Grid Name="AddOPPanel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style >
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="13"/>
+                </Style>
+            </Grid.Resources>
+            <Label Content="Year:"
+               Grid.Row="0"/>
+            <TextBox  Name="tbYear" 
+                 Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label Content="Actor name:"
+               Grid.Row="1"/>
+            <TextBox  Name="tbActor" 
+                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label Content="Actress name:"
+               Grid.Row="2" />
+            <TextBox Name="tbActress" 
+                 Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label Content="Director name:"
+               Grid.Row="3"/>
+            <TextBox  Name="tbDirector" 
+                 Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label Content="Movie name:"
+               Grid.Row="4"/>
+            <TextBox  Name="tbMovie" 
+                 Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Button Name="AddButton" Content="Add" Margin="10" Click="buttonAdd_Click" Grid.Row="5"
+                        Grid.Column="1" Grid.ColumnSpan="2" Width="100"/>
+        </Grid>
+    </GroupBox>
+</Window>
